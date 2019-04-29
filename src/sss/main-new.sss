@@ -1,0 +1,23 @@
+@import "_vars.sss"
+@import "_media.sss"
+
+
+.admin
+	.houses__img
+		display: none
+
+
+	&.page-houses-all
+		.inner-content__list
+			width: 100%
+
+		.houses
+			display: flex 
+			flex-wrap: wrap
+			margin: 0 0 -32px -32px
+
+	.houses__one
+		display: flex 
+		flex-direction: column
+		width: calc((100% - 32px * 3) / 3)
+		margin: 0 0 32px 32px
