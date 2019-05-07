@@ -3,9 +3,14 @@
 
 
 .admin
+
+	.title-block
+
+		&:not(:first-child)
+			margin-top: 65px
+
 	.houses__img
 		display: none
-
 
 	&.page-houses-all
 		.inner-content__list
@@ -14,10 +19,241 @@
 		.houses
 			display: flex 
 			flex-wrap: wrap
-			margin: 0 0 -32px -32px
+			margin: 0 0 -59px -32px
 
 	.houses__one
 		display: flex 
 		flex-direction: column
 		width: calc((100% - 32px * 3) / 3)
-		margin: 0 0 32px 32px
+		margin: 0 0 59px 32px
+
+		&-img
+			margin: 0 0 30px
+
+			img
+				width: 100%
+				display: block
+
+		&-desc
+			flex: 1 1 auto
+
+		&-title, &-price
+			display: block
+
+		&-title
+			margin-right: 0
+			font-size: 25px
+
+		&-price
+			font-size: 20px
+
+	.houses-btn
+		padding: 14px 23px 15px
+		display: inline-block
+		background-image: none !important
+		transition: color .3s ease, background .3s ease
+
+		&:not(:hover)
+			color: #D61A0B
+
+	.inner-content
+
+		&__list
+			width: calc(100% - 302px)
+
+	&.page-houses
+
+		.inner-content
+			padding: 63px 93px 60px 101px
+
+	.house
+
+		&__nav
+			left: 364px
+
+	.house-slider
+		margin: 0
+		position: relative
+
+		&__arrows
+			position: absolute auto 40px 40px auto
+			z-index: 2
+			width: auto
+			padding: 0
+
+			.slick
+
+				&-arrow
+					margin: 0
+					background-color: #fff
+					size: 45px
+
+		&__slider
+			width: 100%
+			margin-left: 0
+
+
+	.house__top-slider 
+		display: flex
+	
+	.house-advantages__item
+		margin-right: 10px
+	
+	.house-advantages 
+		position: relative
+		margin-bottom: 2rem
+	
+	.house-advantages__list 
+		display: flex
+		flex-wrap: wrap
+	
+	.house-desc
+
+		&:not(:first-child)
+			margin-top: 40px
+
+		&--materials
+
+			ul
+
+				li
+					padding: 0
+
+					&:before
+						display: none
+
+					span
+						color: #7F7F7F
+
+.description-block
+	background: url("../img/ico-!.svg") left 33px center no-repeat, #EDEFF1
+	padding: 26px 30px 28px 76px
+	margin: 0 0 50px
+
+	&__text
+		max-width: 1080px
+
+.h-info
+	margin: 57px 0 0
+
+	&__title, &__price
+		display: inline-block
+		vertical-align: middle
+
+	&__title
+
+		&:not(:last-child)
+			margin-right: 65px
+
+	&__price
+		color: #fff
+		background: #D61A0B
+		padding: 14px 28px 15px
+		font-size: 20px
+
+.h-desc
+	margin: 59px 0 0
+	background: #EDEFF1
+	padding: 23px 42px 25px
+
+	&__row
+
+		&:not(:first-child)
+			margin: 17px 0 0
+
+		&-title
+			font-weight: bold
+
+		&-title, &-text
+			display: inline
+
+
+@media (max-width: 1700px)
+	.admin
+
+		&.page-houses
+
+			.inner-content
+				padding: 40px 45px 40px 50px
+
+@media (max-width: 1550px)
+	.admin 
+
+		.house__nav
+			left: 257px
+
+@media (max-width: 1400px)
+	.admin.page-houses 
+
+		.inner-content
+			padding: 40px 25px 40px 25px
+
+	.h-info
+		margin: 30px 0 0
+
+	.h-desc
+		margin: 35px 0 0
+
+@media (max-width: 1300px)
+	.admin 
+
+		.inner-content__list
+			width: calc(100% - 250px)
+		
+		.house
+
+			&__detail
+				padding: 0
+
+@media (max-width: 1200px) and (min-width: 660px)
+	.admin.page-houses-all
+
+		.houses
+			margin: 0 0 -30px -25px
+
+			&__one
+				width: calc((100% - 25px * 2) / 2)
+				margin: 0 0 30px 25px
+
+@media (max-width: 1000px)
+	.inner-content
+
+		&__list
+			width: 100% !important
+
+	.admin
+	
+		.house
+
+			&__detail
+				padding-left: 1.4rem !important
+
+	.admin.page-houses 
+
+		.inner-content
+			padding: 0
+
+@media (max-width: 660px)
+	.admin.page-houses-all
+
+		.houses
+			margin: 0
+			display: block
+
+			&__one
+				width: auto
+				margin: 0 
+
+				&:not(:first-child)
+					margin: 20px 0 0
+
+	.admin
+	
+		.house
+
+			&__detail
+				padding-left: 0 !important
+
+	.description-block
+		background-image: none
+		padding: 20px 25px
