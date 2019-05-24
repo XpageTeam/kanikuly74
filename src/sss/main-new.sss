@@ -2,7 +2,7 @@
 // @import "_media.sss"
 
 
-.main
+.page-about
 	.content
 		display: block
 		overflow: auto
@@ -30,11 +30,25 @@
 			padding: 30px 6.25rem 3.4375rem 
 
 
-.item-gallery:after
-	background: linear-gradient(180deg,transparent,rgba(0,0,0,.23) 70%,rgba(0,0,0,0.25) 0)
+.item-gallery
+	.title
+		padding-top: 2rem
+		font-size: 19px
+		font-weight: bold
+
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			display: block
+			background: linear-gradient(transparent, rgba(0,0,0,.40) 70%, rgba(0,0,0,0.50) 98%)
+			z-index: -1
 
 .house-slider__arrows
-	border: 1px solid #edeff1
+	border: 1px solid #e32526
 
 .title-block
 
