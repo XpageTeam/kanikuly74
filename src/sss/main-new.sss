@@ -1,5 +1,19 @@
 @import "_vars.sss"
-// @import "_media.sss"
+
+@media screen and (min-width: 1920px)
+	.house-slider
+		margin-bottom: 0px !important
+
+
+.h-info__title
+	display: flex !important
+	justify-content: space-between
+
+.aside-btn
+	padding-left: 5.3125rem
+	padding-right: 5.3125rem
+	a
+		white-space: nowrap
 
 
 .page-about
@@ -72,6 +86,13 @@
 	flex-direction: column
 	width: calc((100% - 32px * 3) / 3)
 	margin: 0 0 59px 32px
+	position: relative
+
+	> .houses-btn
+		position: absolute
+		bottom: 0
+		right: 0
+		z-index: 10
 
 	&-img
 		margin: 0 0 30px
@@ -222,9 +243,20 @@
 		.inner-content
 			padding: 40px 45px 40px 50px
 
+@media screen and (max-width: 1600px)
+	
+	.houses-btn
+		padding: 12px 19px 11px
+
+
+
+
 @media (max-width: 1550px)
 	.house__nav
 		left: 257px
+
+	.aside-btn
+		padding: 0 2rem
 
 @media (max-width: 1400px)
 	.page-houses 
@@ -238,7 +270,7 @@
 	.h-desc
 		margin: 35px 0 0
 	
-	.main
+	.page-about
 		.standart-page
 			.text-page
 				padding: 2.5rem 2rem
@@ -251,6 +283,21 @@
 
 		&__detail
 			padding: 0
+
+	.page-houses-all
+
+		.houses
+			margin: 0 0 -30px -15px
+
+	.houses__one
+		width: calc((100% - 15px * 3) / 3)
+		margin: 0 0 30px 15px
+
+	.houses__one-btn
+		padding: 15px 0 0
+
+	.houses-btn
+		padding: 10px 14px 9px
 
 @media (max-width: 1200px) and (min-width: 660px)
 	.page-houses-all
@@ -278,6 +325,36 @@
 		.inner-content
 			padding: 0
 
+@media (max-width: 667px)
+	
+	.top-block__phone
+		display: none
+
+	.top-info
+		top: 1rem
+		right: 1.4rem
+
+	body.inner .aside__wrap
+		flex-wrap: wrap
+
+		.footer
+			order: 1
+			width: 100%
+			padding: 0 !important
+			text-align: left
+			margin-top: 15px
+
+		.footer__call
+			align-items: flex-start
+
+
+	body.inner .aside .footer
+		display: block
+
+		> *
+			&:not(.footer__call)
+				display: none
+
 @media (max-width: 660px)
 	.page-houses-all
 
@@ -300,3 +377,6 @@
 	.description-block
 		background-image: none
 		padding: 20px 25px
+
+
+@import "_media.sss"
