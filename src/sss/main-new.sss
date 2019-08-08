@@ -5,6 +5,7 @@
 		margin-bottom: 0px !important
 
 
+
 .genplan-order-btn-wrapper
 	margin-top: 30px
 
@@ -116,6 +117,18 @@
 
 	&-price
 		font-size: 20px
+
+
+	&-bot
+		display: flex
+		align-items: flex-start
+
+	&__fence-text
+		font-size: rem(18)
+		color: var(--main-color)
+
+.text-page + .houses__one__fence-text
+	margin-top: 15px
 
 .houses-btn
 	padding: 14px 23px 15px
@@ -329,6 +342,27 @@
 			padding: 0
 
 @media (max-width: 667px)
+
+	.houses__one
+		&-bot
+			position: relative
+			padding-bottom: 30px
+
+			.default-btn
+				padding: 7px 12px
+				letter-spacing: 0
+				border: none
+				font-size: 13px
+				margin-left: 10px
+
+		&-title
+			font-size: 20px
+
+		&__fence-text
+			position: absolute
+			bottom: 0
+			left: 0
+
 	
 	.top-block__phone
 		display: none
@@ -395,5 +429,12 @@
 		background-image: none
 		padding: 20px 25px
 
+@media (max-width: 370px)
+	
+	.houses__one-bot
+		flex-direction: column
+
+		.default-btn
+			margin-left: 0
 
 @import "_media.sss"
