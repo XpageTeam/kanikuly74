@@ -5,6 +5,62 @@
 	.house-slider
 		margin-bottom: 0px !important
 
+.selected_project
+	.houses__one-img
+		position: relative
+		
+		&::after
+			content: ''
+			display: block
+			position: absolute -5px -5px * *
+			size: 100px
+			background: url('../img/ico-selected.svg') no-repeat right top
+		
+
+
+.slider
+	position: relative
+	margin: 50px 0
+
+	.slider
+		&-list
+			margin: 0 -15px
+
+		&-item
+			margin: 0 15px
+
+	&-arrows
+		position: absolute
+		left: 0
+		right: 0
+		top: calc(50% - 15px)
+		display: flex
+		justify-content: space-between
+		z-index: 10
+
+		.slick-arrow
+			size: 30px
+			background-color: rgba(0,0,0, .3)
+			border: 0
+			box-shadow: none
+			padding: 0
+
+			position: relative
+
+
+			&::before
+				content: ''
+				display: block
+				size: 8px
+				border-top: 1px solid #fff
+				border-right: 1px solid #fff
+				transform: rotate(45deg)
+				position: absolute calc(50% - 4px) calc(50% - 4px) * *
+
+		.slick-prev
+			transform: rotate(180deg)
+			margin-left: 3px
+
 
 .genplan-big__text--bg
 	margin: 20px 0 30px !important
